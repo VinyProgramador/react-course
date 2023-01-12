@@ -1,31 +1,54 @@
 import React from 'react';
+import { useState, useRef } from 'react';
 import './Game.css';
 
-const Game = ({ verifyLetter }) => {
+const Game = ({ verifyLetter, pickedWord, pickedCategory, letters, guessLetters, wrongLetters, gueses, score }) => {
+
+    const [letter, setLetter] = useState("");
+    const letterInputLetterRef = useRef(null);
+
+    const hendleSubmit = (e) =>{
+        e.preventDefault();
+
+        verifyLetter(letter);
+        setLetter('');
+        letterInputLetterRef.current.focus();
+    }
     return (
         <div className='game'>
             <p className='points'>
-                <span>Pontuação: 000</span>
+                <span>Pontuação: {score}</span>
             </p>
             <h1>Adivinhe a palavra</h1>
             <h3 className='tip'>
-                Dica sobre a palavra: <span>Dica..</span>
+                Dica sobre a palavra: <span>{pickedCategory}</span>
             </h3>
+            <p>Você ainda tem {gueses} tentativa(s).</p>
             <div className='wordContainer'>
-                <span className='letter'>A</span>
-                <span className='blankSquare'></span>
+                {letters.map((letter, i) => (
+                    guessLetters.includes(letter) ? (
+                        <span key={i} className='letter'>{letter}</span>
+                    ) : (
+                        <span key={i} className='blankSquare'></span>
+                    )
+                ))}
             </div>
             <div className="letterContainer">
                 <p>Tente adivinhar uma palavra:</p>
-                <form>
-                    <input type="text" name='letter' maxLength={1} required/>
+                <form onSubmit={hendleSubmit}>
+                    <input type="text" name='letter' maxLength={1} required
+                        onChange={(e) => setLetter(e.target.value)}
+                        value={letter}
+                        ref={letterInputLetterRef}
+                    />
                     <button>Jogar</button>
                 </form>
             </div>
             <div className="wrongLettersContainer">
                 <p>Letras já utilizadas</p>
-                <span>a,</span>
-                <span>b,</span>
+                {wrongLetters.map((letter, i) => (
+                    <span>key={i}{letter},</span>
+                ))}
             </div>
         </div>
     )
