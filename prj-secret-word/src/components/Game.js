@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useRef } from 'react';
 import './Game.css';
 
-const Game = ({ verifyLetter, pickedWord, pickedCategory, letters, guessLetters, wrongLetters, gueses, score }) => {
+const Game = ({ verifyLetter, pickedWord, pickedCategory, letters, guessLetters, wrongLetters, guesses, score }) => {
 
     const [letter, setLetter] = useState("");
     const letterInputLetterRef = useRef(null);
@@ -23,7 +23,7 @@ const Game = ({ verifyLetter, pickedWord, pickedCategory, letters, guessLetters,
             <h3 className='tip'>
                 Dica sobre a palavra: <span>{pickedCategory}</span>
             </h3>
-            <p>Você ainda tem {gueses} tentativa(s).</p>
+            <p>Você ainda tem {guesses} tentativa(s).</p>
             <div className='wordContainer'>
                 {letters.map((letter, i) => (
                     guessLetters.includes(letter) ? (
@@ -47,7 +47,7 @@ const Game = ({ verifyLetter, pickedWord, pickedCategory, letters, guessLetters,
             <div className="wrongLettersContainer">
                 <p>Letras já utilizadas</p>
                 {wrongLetters.map((letter, i) => (
-                    <span>key={i}{letter},</span>
+                    <span key={i}>{letter},</span>
                 ))}
             </div>
         </div>
