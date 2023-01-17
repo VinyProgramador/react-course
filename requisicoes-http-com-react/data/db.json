@@ -24,6 +24,16 @@
       "name": "Hq",
       "price": "500",
       "id": 5
+    },
+    {
+      "name": "boneco do batman",
+      "price": "700",
+      "id": 6
+    },
+    {
+      "name": "QUADRO DO VINY",
+      "price": "555",
+      "id": 7
     }
   ]
 }
