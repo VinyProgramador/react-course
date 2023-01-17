@@ -16,97 +16,14 @@
       "price": 29.9
     },
     {
+      "name": "Teclado",
+      "price": "400",
       "id": 4
     },
     {
+      "name": "Hq",
+      "price": "500",
       "id": 5
-    },
-    {
-      "id": 6
-    },
-    {
-      "id": 7
-    },
-    {
-      "id": 8
-    },
-    {
-      "id": 9
-    },
-    {
-      "name": "",
-      "price": "",
-      "id": 10
-    },
-    {
-      "name": "Hq do Batman",
-      "price": "",
-      "id": 11
-    },
-    {
-      "name": "Hq do Batman",
-      "price": "59",
-      "id": 12
-    },
-    {
-      "name": "Hq do Batman",
-      "price": "59",
-      "id": 13
-    },
-    {
-      "name": "",
-      "price": "",
-      "id": 14
-    },
-    {
-      "name": "",
-      "price": "",
-      "id": 15
-    },
-    {
-      "name": "r",
-      "price": "",
-      "id": 16
-    },
-    {
-      "name": "r",
-      "price": "3",
-      "id": 17
-    },
-    {
-      "name": "",
-      "price": "",
-      "id": 18
-    },
-    {
-      "name": "d",
-      "price": "5",
-      "id": 19
-    },
-    {
-      "name": "d",
-      "price": "5",
-      "id": 20
-    },
-    {
-      "name": "",
-      "price": "",
-      "id": 21
-    },
-    {
-      "name": "d",
-      "price": "",
-      "id": 22
-    },
-    {
-      "name": "d",
-      "price": "",
-      "id": 23
-    },
-    {
-      "name": "d",
-      "price": "5",
-      "id": 24
     }
   ]
 }
