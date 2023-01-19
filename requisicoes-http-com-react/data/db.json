@@ -39,6 +39,26 @@
       "name": "mouse",
       "price": "60",
       "id": 8
+    },
+    {
+      "name": "QUADRO DO VINY",
+      "price": "500",
+      "id": 9
+    },
+    {
+      "name": "s",
+      "price": "555",
+      "id": 10
+    },
+    {
+      "name": "Vinicius de Almeida Nunes",
+      "price": "500",
+      "id": 11
+    },
+    {
+      "name": "Thiago",
+      "price": "5454",
+      "id": 12
     }
   ]
 }
