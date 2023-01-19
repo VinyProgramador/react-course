@@ -1,0 +1,19 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Batman Cavalheiro das Trevas Hq",
+        "price": 79.9
+      },
+      {
+        "id": 2,
+        "name": "Action figure The Batman",
+        "price": 200.99
+      },
+      {
+        "id": 3,
+        "name": "Camisa do Batman de 89",
+        "price": 49.90
+      }
+    ]
+  }
