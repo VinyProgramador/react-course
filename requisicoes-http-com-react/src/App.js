@@ -9,7 +9,7 @@ function App() {
 
   const [products, setProducts] = useState([]);
   //custom hook
-  const { data: items, httpConfig, loading } = useFetch(url);
+  const { data: items, httpConfig, loading, error } = useFetch(url);
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
 
@@ -58,8 +58,8 @@ function App() {
       <h1>Lista de Produtos</h1>
       {/* Loading */}
       {loading && <p>Carregando dados..</p>}
-
-      {!loading &&(
+      {error && <p>{error}</p>}
+      {!error &&(
         <ul>
           {items && items.map((product) => (
             <li key={product.id}>Produto: {product.name} - Preço: R$ {product.price}</li>
@@ -72,7 +72,9 @@ function App() {
             Nome: <input type="text" value={name} name="name" onChange={(e) => setName(e.target.value)} />
             Preço: <input type="number" value={price} name="price" onChange={(e) => setPrice(e.target.value)} />
           </label>
-          <input type="submit" value="Cadastrar" />
+          {/* loading no post */}
+          {loading &&  <input type="submit" disabled value="Aguarde"/>}
+          {!loading && <input type="submit" value="Cadastrar" />}
         </form>
       </div>
     </div>
