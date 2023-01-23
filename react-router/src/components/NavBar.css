@@ -16,8 +16,8 @@ nav a:hover{
     color: forestgreen;
 }
 
-.activate{
+.active{
     background-color: black;
     border-radius: 5px;
-    color: forestgreen;
+    color: #fff;
 }
