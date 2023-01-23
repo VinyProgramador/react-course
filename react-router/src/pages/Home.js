@@ -22,6 +22,8 @@ const Home = () => {
             <li key={item.id}>
               <h3>{item.name}</h3>
               <p>R$: {item.price}</p>
+              {/* Rota dinamica  */}
+              <Link to={`/products/${item.id}`}>Detalhes</Link>
             </li>
           ))}
       </ul>
