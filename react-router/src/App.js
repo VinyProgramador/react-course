@@ -1,7 +1,7 @@
 import './App.css';
 
 // pacotes do react router
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import NavBar from './components/NavBar';
@@ -22,6 +22,8 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
+          {/* redirect */}
+          <Route path='/company' element={<Navigate to='/about' />} />
           {/* rota dinamica */}
           <Route path='/products/:id' element={<Product />}/>
           {/* nested routes */}
