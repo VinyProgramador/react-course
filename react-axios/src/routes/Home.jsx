@@ -24,7 +24,7 @@ const Home = () => {
     getPosts();
   }, [])
   return (
-    <div>
+    <div className='home'>
       <h1>Ultimos Posts</h1>
       {posts.length === 0? (<p>Carregando..</p>): (
         posts.map((post)=>(
