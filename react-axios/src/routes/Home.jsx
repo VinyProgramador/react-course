@@ -12,6 +12,8 @@ const Home = () => {
       const response = await axios.get('https://jsonplaceholder.typicode.com/posts')
       const data = response.data;
       console.log(data)
+
+      setPosts(data);
     }
     catch(error){
       console.log(error+" Erro na chamada..")
@@ -22,7 +24,21 @@ const Home = () => {
     getPosts();
   }, [])
   return (
-    <div>Home</div>
+    <div>
+      <h1>Ultimos Posts</h1>
+      {posts.length === 0? (<p>Carregando..</p>): (
+        posts.map((post)=>(
+          <div className="posts" key={post.id}>
+            <h2>{post.title}</h2>
+            <p>{post.body}</p>
+            <Link to={`/post/${post.id}`} className="btn">
+              Ler mais
+            </Link>
+          </div>
+        ))
+      )}
+      
+    </div>
   )
 }
 
