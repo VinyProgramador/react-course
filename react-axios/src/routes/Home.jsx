@@ -32,7 +32,7 @@ const Home = () => {
             <h2>{post.title}</h2>
             <p>{post.body}</p>
             <Link to={`/post/${post.id}`} className="btn">
-              Ler mais
+              Cadastro
             </Link>
           </div>
         ))
